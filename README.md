@@ -44,7 +44,7 @@ aaa session-id common
 username admin privilege 15 secret 9 ....
 ```
 
-### Prerequisite steps: create Postman Collection
+#### Prerequisite steps: create Postman Collection
 
 These steps are already done for you!
 
@@ -70,9 +70,37 @@ Password: Cisco123
 1. Navigate to **"Variables"** tab and create the following new variables that we are going to use in this demo
 ```
       **Variable**      **Initial Value**       **Current Value**
-        host              10.1.1.5.               10.1.1.5.
+        host              10.1.1.5                10.1.1.5
         username          admin                   admin
         password          Cisco123                Cisco123
 ```
 
 2. Select **"Create"**
+
+![](imgs/Postman_Collection_Variables.png)
+
+#### Prerequisite step: Create Folder within the Collection
+
+These steps are already done for you!
+
+* Next to the collection that you have created, click on three dots.
+* Select **"Add Folder"**
+
+<img src="imgs/Postman_Add_Folder.png" width="700" height="800">
+<p></p>
+
+* Create a folder name - **"RESTCONF"**
+* Navigate to **"Authorization tab"**
+* For the type select **"Inherit auth from parent"**
+* Click on **"Create"**
+
+
+<img src="imgs/Postman_Folder_Settings.png" width="700" height="700">
+
+### Step 4: Create GET/PATCH/POST/DELETE API calls
+
+#### First API Call
+
+* Enter request URL where {{host}} is your variable 10.1.1.5
+https://{{host}}/restconf/data/ietf-interfaces:interfaces
+Navigate to "Authorization" and select "Inherit auth from parent"
