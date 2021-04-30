@@ -171,6 +171,8 @@ https://{{host}}/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEther
 
 **Read mac addresses for a specific interface (Read MAC Address Table)**
 
+https://{{host}}/restconf/data/Cisco-IOS-XE-matm-oper:matm-oper-data
+
 **Read all arp entries**
 
 https://{{host}}/restconf/data/Cisco-IOS-XE-arp-oper:arp-data
