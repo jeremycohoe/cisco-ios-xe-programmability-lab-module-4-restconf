@@ -144,7 +144,7 @@ You should get the following response:
 
 *Notice the status of the response, it defines the status of the request. In our case, we got status 200 OK, which means that we got a successful request.*
 
-##### Congratulations, you successfully created and saved your first API call!!!
+## Congratulations, you successfully created and saved your first API call!!!
 
 
 #### Perform the same steps for the following GET requests
