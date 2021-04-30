@@ -68,8 +68,9 @@ Password: Cisco123
 
 
 1. Navigate to **"Variables"** tab and create the following new variables that we are going to use in this demo
-```
       **Variable**      **Initial Value**       **Current Value**
+```
+
         host              10.1.1.5                10.1.1.5
         username          admin                   admin
         password          Cisco123                Cisco123
