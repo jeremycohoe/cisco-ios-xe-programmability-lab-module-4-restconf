@@ -56,7 +56,7 @@ Navigate to Postman application to create your first Postman Collection
 ![](imgs/Postman_Create_Collection.png)
 
 * In the "Collection Name" Bar enter the following name:
-**Demo Farm - Programmability and Automation**
+**Programmability and Automation**
 * Navigate to the **"Authorization"** tab and select **"Type"** from the drop-down - **"Basic Auth"**
 * Enter Username and Password
 
@@ -65,3 +65,14 @@ Username: admin
 Password: Cisco123
 ```
 ![](imgs/Postman_Create_a_new_Collection_and_Authorization.png)
+
+
+1. Navigate to **"Variables"** tab and create the following new variables that we are going to use in this demo
+```
+      **Variable**      **Initial Value**       **Current Value**
+        host              10.1.1.5.               10.1.1.5.
+        username          admin                   admin
+        password          Cisco123                Cisco123
+```
+
+2. Select **"Create"**
