@@ -147,7 +147,7 @@ You should get the following response:
 ## Congratulations, you successfully created and saved your first API call!!!
 
 
-#### Perform the same steps for the following GET requests
+### Perform the same steps for the following GET requests
 
 <p></p>
 
