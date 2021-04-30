@@ -53,7 +53,7 @@ Navigate to Postman application to create your first Postman Collection
 * Click on **"New"**
 * In the pop-up window click on **"Collection"**
 
-![](imgs/Postman-Create Collection.png)
+![](imgs/Postman - Create Collection.png)
 
 * In the "Collection Name" Bar enter the following name:
 **Demo Farm - Programmability and Automation**
