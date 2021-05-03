@@ -1,8 +1,6 @@
 # Demo - Cisco IOS XE - Postman Collections
 
-This demo contains a POSTMAN environment and collection that can be used to interact with the IOS XE on CSR Latest Code Always On Sandbox. The IOS XE on CSR Latest Code Always On Sandbox offers developers shared, VPNless access to an IOS XE device running the latest IOS XE code release available on cisco.com. Here you can test out the newest programmability features and data models available
-
-The environment is pre-configured to access the IOS XE on CSR Latest Code Always On Sandbox. Postman collection for Cisco IOS XE RESTCONF + YANG Model Driven Programmability interface (API)
+This demo contains a POSTMAN environment and collection that can be used to interact with the IOS XE on C9300. Postman collection for Cisco IOS XE RESTCONF + YANG Model Driven Programmability interface (API)
 
 You can edit the variables in the environment to point to your own IOS XE device. Feel free to modify them as you see fit and to add more calls to the collection.
 
@@ -223,7 +221,7 @@ https://{{host}}/restconf/data/Cisco-IOS-XE-arp-oper:arp-data
 
 *Notice that the description of the **GigabitEthernet 1/0/1** interface has the description* **"Working with Postman API call"**
 
-![](imgs/Postman_verify_the_change.png)
+![](imgs/Postman_verify_PATCH.png)
 
 ### Create a POST request
 
