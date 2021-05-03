@@ -256,7 +256,7 @@ Let's add the new loopback interface
 
                      {                    
 
-                           "ip": "172.16.100.1",                    
+                           "ip": "10.1.1.15",                    
 
                            "netmask": "255.255.255.0"                
 
