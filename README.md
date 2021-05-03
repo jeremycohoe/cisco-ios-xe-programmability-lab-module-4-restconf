@@ -176,3 +176,136 @@ https://{{host}}/restconf/data/Cisco-IOS-XE-matm-oper:matm-oper-data
 **Read all arp entries**
 
 https://{{host}}/restconf/data/Cisco-IOS-XE-arp-oper:arp-data
+
+### Create a PATCH request
+* In the URI bar enter the following. We will change the interface description.
+
+   * https://{{host}}/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet
+
+
+* From the drop-down, select **"PATCH"**
+
+* Enter the same **"Authentication"** and **"Headers"** information as we did in GET request
+* Navigate to **"Body"** and select **"raw"**, make sure that **"JSON"** format is selected
+* In the editing window, enter the following:
+
+```
+{  
+
+"Cisco-IOS-XE-native:GigabitEthernet": [    
+
+{      "name": "1/0/1",      
+
+       "description": "Working with Postman API calls"    
+
+} ] }
+
+```
+
+* Save the **"PATCH"** request to the **RESTCONF** folder
+
+* Click on **"Send"**
+
+![](imgs/Postman_PATCH_request.png)
+
+### Verify the following description change
+
+* Create the new "GET request" to verify the description change
+
+* Enter the following **"URL"**
+  * https://{{host}}/restconf/data/Cisco-IOS-XE-native:native/interface/GigabitEthernet=1%2F0%2F1
+
+
+* Enter the same **"Authorization"** and **"Headers"** information as we did in GET request
+
+* Save the request to the **"RESTCONF"** folder
+* Click on **"Send"** and examine the result
+
+*Notice that the description of the **GigabitEthernet 1/0/1** interface has the description* **"Working with Postman API call"**
+
+![](imgs/Postman_verify_the_change.png)
+
+### Create a POST request
+
+Let's add the new loopback interface
+
+* Create a new POST request by entering there following URL
+
+  * https://{{host}}/restconf/data/ietf-interfaces:interfaces
+
+
+* Select **"POST"** from the drop-down
+
+* Enter the same **"Authorization"** and **"Headers"** information as we did in GET request
+* In the **"Body"** tab, enter the following configuration. Make sure so select **"JSON"** format
+
+```
+{    
+
+    "ietf-interfaces:interface": {        
+
+         "name": "Loopback100",        
+
+         "description": "Configured by RESTCONF",       
+
+         "type": "iana-if-type:softwareLoopback",       
+
+         "enabled": true,        
+
+         "ietf-ip:ipv4": {           
+
+              "address": [               
+
+                     {                    
+
+                           "ip": "172.16.100.1",                    
+
+                           "netmask": "255.255.255.0"                
+
+                      }            
+
+               ]        
+
+          }    
+
+      }
+
+}
+
+```
+* Save the request to the **"RESTCONF"** folder
+
+* Click on **"Send"** and examine the result
+
+![](imgs/Postman_post_request.png)
+
+*Notice the Status of the request is - **201 Created**. It means that the request was successful and the data was created.*
+
+Make sure to verify if this request took effect by sending the GET request to this URL.
+
+https://{{host}}/restconf/data/ietf-interfaces:interfaces/interface=Loopback100
+
+### Create a DELETE request
+
+Since we have just created the new Loopback interface and verified the results. Let's try to delete the same interface by using the **DELETE** request.
+
+* Enter the following URL
+
+  *https://{{host}}/restconf/data/ietf-interfaces:interfaces/interface=Loopback100
+
+
+* Select **"DELETE"** from the drop-down
+
+* Enter the same **"Authorization"** and **"Headers"** information as we did in GET request
+* Save the request to the **"RESTCONF"** folder
+* Click on **"Send"** and examine the result
+
+*Notice that the Status of the request is **204 No Content**, it means that the response is empty and we have successfully deleted the Loopback interface.*
+
+![](imgs/Postman_Delete_request.png)
+
+Let's verify that the delete request took effect by simply changing the request from DELETE to GET
+
+*Notice that the status of this request is **404 Not Found** which means that the data was not found and we have successfully deleted the Loopback100.*
+
+![](imgs/Postman_verify_delete.png)
